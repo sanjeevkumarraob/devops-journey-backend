@@ -1,0 +1,12 @@
+{
+  "auth":{
+    "secretKey":"3a15b8c24a51452998f635fc99bd3e9b"
+  },
+  "dbConfig": {
+      "dbUser":"me",
+      "host": "localhost",
+      "port": 5432,
+      "dbName": "api",
+      "dbPassword": "password"
+  }
+}
