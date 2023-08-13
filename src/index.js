@@ -18,11 +18,11 @@ app.use(cookieParser());
 app.get("/", (request, response) => {
   response.json({ info: "Node.js, Express, and Postgres API" });
 });
-app.get("/users", dbusers.getUsers);
-app.get("/users/:id", dbusers.getUserById);
-app.post("/users", dbusers.createUser);
-app.put("/users/:id", dbusers.updateUser);
-app.delete("/users/:id", dbusers.deleteUser);
+// app.get("/users", dbusers.getUsers);
+// app.get("/users/:id", dbusers.getUserById);
+// app.post("/users", dbusers.createUser);
+// app.put("/users/:id", dbusers.updateUser);
+// app.delete("/users/:id", dbusers.deleteUser);
 
 //synchronizing the database and forcing it to false so we dont lose data
 db.sequelize.sync({ force: false }).then(() => {

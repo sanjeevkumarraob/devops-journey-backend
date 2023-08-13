@@ -1,12 +1,15 @@
 //importing modules
 const { Sequelize, DataTypes } = require("sequelize");
+const config = require("config");
 
 //Database connection with dialect of postgres specifying the database we are using
 //port for my database is 5433
 //database name is discover
-const sequelize = new Sequelize(
-  `postgres://me:password@localhost:5432/api`,
-  { dialect: "postgres" }
+const sequelize = new Sequelize(config.dbConfig.dbName, config.dbConfig.dbUser,config.dbConfig.dbPassword, {
+    dialect: 'postgres',
+    port: config.dbConfig.port,
+    host: config.dbConfig.host,
+}
 );
 
 //checking if connection is done
